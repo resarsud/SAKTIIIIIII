@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAKTI BLUD 2026 - UPT RSUD Pontianak Utara</title>
+<style>
+:root{--p:#1a4f8a;--pl:#2563b0;--ac:#00a878;--ac2:#f59e0b;--dan:#ef4444;--bg:#f0f4f8;--card:#fff;--tx:#1e293b;--sub:#64748b;--bdr:#e2e8f0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);font-size:13px;}
+.header{background:linear-gradient(135deg,#0f2d5e,#1a4f8a,#1d6fa3);color:#fff;}
+.hd-top{display:flex;align-items:center;gap:14px;padding:14px 20px 10px;}
+.logo{background:#fff;border-radius:10px;padding:7px 10px;}
+.logo svg{width:34px;height:34px;}
+.hd-title h1{font-size:17px;font-weight:700;}
+.hd-title p{font-size:11px;opacity:.8;margin-top:2px;}
+.hd-sub{background:rgba(0,0,0,.2);padding:7px 20px;font-size:11px;display:flex;gap:20px;flex-wrap:wrap;opacity:.9;}
+.hd-sub strong{color:#7dd3fc;}
+.nav{background:#fff;border-bottom:2px solid var(--bdr);display:flex;padding:0 14px;overflow-x:auto;}
+.tb{padding:11px 16px;border:none;background:none;cursor:pointer;font-size:12px;font-weight:600;color:var(--sub);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;}
+.tb:hover{color:var(--p);}
+.tb.on{color:var(--p);border-bottom-color:var(--p);}
+.main{padding:16px;max-width:1400px;margin:0 auto;}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin-bottom:16px;}
+.sc{background:var(--card);border-radius:10px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid var(--p);}
+.sc.g{border-left-color:var(--ac);}
+.sc.o{border-left-color:var(--ac2);}
+.sc.r{border-left-color:var(--dan);}
+.sc.v{border-left-color:#7c3aed;}
+.sl{font-size:10px;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;}
+.sv{font-size:20px;font-weight:700;}
+.ss{font-size:10px;color:var(--sub);margin-top:3px;}
+.sec{background:var(--card);border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:16px;overflow:hidden;}
+.sh{padding:12px 16px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.st{font-size:13px;font-weight:700;color:var(--p);display:flex;align-items:center;gap:7px;}
+.sb{padding:14px 16px;}
+.tab-c{display:none;}
+.tab-c.on{display:block;}
+.badge{padding:2px 9px;border-radius:20px;font-size:10px;font-weight:700;}
+.bb{background:#dbeafe;color:#1d4ed8;}.bg{background:#dcfce7;color:#166534;}.bo{background:#fef3c7;color:#92400e;}.br{background:#fee2e2;color:#991b1b;}.bw{background:#f1f5f9;color:#475569;}.bv{background:#ede9fe;color:#5b21b6;}
+.btn{padding:7px 14px;border-radius:8px;border:none;cursor:pointer;font-size:12px;font-weight:600;transition:all .2s;}
+.btn-p{background:var(--p);color:#fff;}.btn-p:hover{background:var(--pl);}
+.btn-g{background:var(--ac);color:#fff;}.btn-g:hover{opacity:.85;}
+.btn-r{background:var(--dan);color:#fff;}.btn-r:hover{opacity:.85;}
+.btn-o{background:var(--ac2);color:#fff;}.btn-o:hover{opacity:.85;}
+.btn-v{background:#7c3aed;color:#fff;}.btn-v:hover{opacity:.85;}
+.btn-sm{padding:4px 10px;font-size:11px;}
+.btn-out{background:#fff;border:1.5px solid var(--bdr);color:var(--tx);}.btn-out:hover{border-color:var(--p);color:var(--p);}
+input,select,textarea{padding:7px 11px;border:1.5px solid var(--bdr);border-radius:8px;font-size:12px;background:#fff;color:var(--tx);outline:none;width:100%;}
+input:focus,select:focus{border-color:var(--p);}
+label{font-size:11px;font-weight:600;color:var(--sub);margin-bottom:3px;display:block;}
+.fg{display:flex;flex-direction:column;gap:3px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+.tbl-wrap{overflow-x:auto;max-height:460px;overflow-y:auto;}
+table{width:100%;border-collapse:collapse;}
+thead th{background:#f8fafc;padding:9px 8px;text-align:left;font-weight:700;color:var(--sub);text-transform:uppercase;font-size:10px;letter-spacing:.4px;border-bottom:2px solid var(--bdr);white-space:nowrap;position:sticky;top:0;z-index:1;}
+tbody tr{border-bottom:1px solid var(--bdr);transition:background .15s;}
+tbody tr:hover{background:#f8fafc;}
+td{padding:8px;vertical-align:middle;font-size:12px;}
+.prog-bar{height:5px;background:#e2e8f0;border-radius:4px;overflow:hidden;margin:3px 0;}
+.pf{height:100%;border-radius:4px;}
+.pf.c1{background:var(--ac);}
+.pf.c8{background:var(--ac2);}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;align-items:center;justify-content:center;}
+.overlay.on{display:flex;}
+.modal{background:#fff;border-radius:14px;width:92%;max-width:640px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.2);}
+.mh{padding:16px 20px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#f8fafc,#fff);}
+.mh h3{font-size:15px;font-weight:700;color:var(--p);}
+.mc{padding:18px 20px;}
+.mf{display:flex;justify-content:flex-end;gap:10px;padding:14px 20px;border-top:1px solid var(--bdr);}
+.close-btn{background:none;border:none;font-size:20px;cursor:pointer;color:var(--sub);padding:4px;}
+.close-btn:hover{color:var(--dan);}
+.notif{position:fixed;top:20px;right:20px;z-index:999;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.15);transition:all .3s;transform:translateX(200px);opacity:0;}
+.notif.show{transform:translateX(0);opacity:1;}
+.notif.ok{background:#dcfce7;color:#166534;border:1px solid #86efac;}
+.notif.err{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;}
+.notif.info{background:#dbeafe;color:#1d4ed8;border:1px solid #93c5fd;}
+.search-box{padding:7px 12px;border:1.5px solid var(--bdr);border-radius:8px;font-size:12px;}
+.fbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;}
+.info-box{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;font-size:12px;color:#1d4ed8;margin-bottom:12px;}
+.sub-nav{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;}
+.sntb{padding:7px 16px;border-radius:20px;border:1.5px solid var(--bdr);background:#fff;font-size:12px;cursor:pointer;font-weight:600;color:var(--sub);transition:all .2s;}
+.sntb:hover{border-color:var(--p);color:var(--p);}
+.sntb.on{background:var(--p);color:#fff;border-color:var(--p);}
+.kode-chip{display:inline-block;padding:3px 8px;border-radius:6px;font-family:monospace;font-size:11px;font-weight:700;background:#ede9fe;color:#5b21b6;white-space:nowrap;}
+.jenis-chip{display:inline-block;padding:2px 8px;border-radius:12px;font-size:10px;font-weight:700;}
+.jenis-bj{background:#dbeafe;color:#1d4ed8;}
+.jenis-bm{background:#dcfce7;color:#166534;}
+@media(max-width:600px){.sg{grid-template-columns:1fr 1fr;}.grid2,.grid3{grid-template-columns:1fr;}.hd-sub{gap:10px;}}
+</style>
+</head>
+<body>
+
+<div class="notif" id="notif"></div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="hd-top">
+    <div class="logo">
+      <svg viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#1a4f8a"/><path d="M18 6L8 11V20C8 25.5 12.5 30.7 18 32C23.5 30.7 28 25.5 28 20V11L18 6Z" fill="white" opacity=".9"/><rect x="16.5" y="13" width="3" height="10" rx="1.5" fill="#1a4f8a"/><rect x="13" y="16.5" width="10" height="3" rx="1.5" fill="#1a4f8a"/></svg>
+    </div>
+    <div class="hd-title">
+      <h1>🏥 SAKTI BLUD 2026</h1>
+      <p>Sistem Akuntabilitas Keuangan Terintegrasi · UPT RSUD Pontianak Utara</p>
+    </div>
+  </div>
+  <div class="hd-sub">
+    <span>📍 Jl. Khatulistiwa No. 151, Siantan Hilir, Pontianak Utara</span>
+    <span>🏷️ Motto: <strong>Siap Melayani</strong></span>
+    <span>📅 TA: <strong>2026</strong></span>
+    <span>⚙️ By: <strong>Resafina Melinda Sadomo, S.KM</strong></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button class="tb on"  onclick="sw('dashboard',this)">📊 Dashboard</button>
+  <button class="tb"     onclick="sw('tracking',this)">📋 Tracking SPJ</button>
+  <button class="tb"     onclick="sw('ref',this)">🗄️ Database REF</button>
+  <button class="tb"     onclick="sw('rekening',this)">📂 Kode Rekening</button>
+  <button class="tb"     onclick="sw('rekap',this)">📈 Rekap Belanja</button>
+</div>
+
+<div class="main">
+
+<!-- ============ DASHBOARD ============ -->
+<div id="tab-dashboard" class="tab-c on">
+  <div class="sg">
+    <div class="sc"><div class="sl">Total SPJ Masuk</div><div class="sv">98</div><div class="ss">s/d April 2026</div></div>
+    <div class="sc g"><div class="sl">Selesai (100%)</div><div class="sv">61</div><div class="ss">Feb & Maret 2026</div></div>
+    <div class="sc o"><div class="sl">Proses (80%)</div><div class="sv">37</div><div class="ss">Maret & April 2026</div></div>
+    <div class="sc"><div class="sl">Total Nilai SPJ</div><div class="sv" style="font-size:14px">Rp 1,55 M</div><div class="ss">Keseluruhan transaksi</div></div>
+    <div class="sc g"><div class="sl">Rekanan (REF)</div><div class="sv" id="db-count">—</div><div class="ss">Database penyedia</div></div>
+    <div class="sc v"><div class="sl">Kode Rekening</div><div class="sv" id="rek-count">—</div><div class="ss">Sub kegiatan aktif</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div class="sec">
+      <div class="sh"><div class="st">📅 Ringkasan Per Bulan</div></div>
+      <div class="sb">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:10px;padding:14px;color:#fff;">
+            <div style="font-size:10px;font-weight:700;opacity:.8;letter-spacing:1px;">FEBRUARI 2026</div>
+            <div style="font-size:18px;font-weight:800;margin:4px 0;">Rp 841 Juta</div>
+            <div style="font-size:11px;opacity:.8;">26 SPJ · 100% Lunas</div>
+            <div style="height:5px;background:rgba(255,255,255,.3);border-radius:3px;margin-top:8px;"><div style="height:100%;width:100%;background:#fff;border-radius:3px;"></div></div>
+          </div>
+          <div style="background:linear-gradient(135deg,#0891b2,#06b6d4);border-radius:10px;padding:14px;color:#fff;">
+            <div style="font-size:10px;font-weight:700;opacity:.8;letter-spacing:1px;">MARET 2026</div>
+            <div style="font-size:18px;font-weight:800;margin:4px 0;">Rp 319 Juta</div>
+            <div style="font-size:11px;opacity:.8;">35 SPJ · Mix 80–100%</div>
+            <div style="height:5px;background:rgba(255,255,255,.3);border-radius:3px;margin-top:8px;"><div style="height:100%;width:87%;background:#fff;border-radius:3px;"></div></div>
+          </div>
+          <div style="background:linear-gradient(135deg,#d97706,#f59e0b);border-radius:10px;padding:14px;color:#fff;">
+            <div style="font-size:10px;font-weight:700;opacity:.8;letter-spacing:1px;">APRIL 2026</div>
+            <div style="font-size:18px;font-weight:800;margin:4px 0;">Rp 394 Juta</div>
+            <div style="font-size:11px;opacity:.8;">37 SPJ · 80% Proses</div>
+            <div style="height:5px;background:rgba(255,255,255,.3);border-radius:3px;margin-top:8px;"><div style="height:100%;width:80%;background:#fff;border-radius:3px;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="sec">
+        <div class="sh"><div class="st">🏢 Per Seksi</div></div>
+        <div class="sb">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:var(--bg);border-radius:8px;padding:10px;display:flex;align-items:center;gap:8px;"><div style="width:12px;height:12px;background:#1a4f8a;border-radius:3px;flex-shrink:0;"></div><div><div style="font-size:10px;color:var(--sub);">Tata Usaha</div><div style="font-size:14px;font-weight:700;">47 SPJ</div></div></div>
+            <div style="background:var(--bg);border-radius:8px;padding:10px;display:flex;align-items:center;gap:8px;"><div style="width:12px;height:12px;background:#7c3aed;border-radius:3px;flex-shrink:0;"></div><div><div style="font-size:10px;color:var(--sub);">Penunjang</div><div style="font-size:14px;font-weight:700;">37 SPJ</div></div></div>
+            <div style="background:var(--bg);border-radius:8px;padding:10px;display:flex;align-items:center;gap:8px;"><div style="width:12px;height:12px;background:#0891b2;border-radius:3px;flex-shrink:0;"></div><div><div style="font-size:10px;color:var(--sub);">Yankes & Mutu</div><div style="font-size:14px;font-weight:700;">14 SPJ</div></div></div>
+            <div style="background:var(--bg);border-radius:8px;padding:10px;display:flex;align-items:center;gap:8px;"><div style="width:12px;height:12px;background:#f59e0b;border-radius:3px;flex-shrink:0;"></div><div><div style="font-size:10px;color:var(--sub);">Lainnya</div><div style="font-size:14px;font-weight:700;">2 SPJ</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="sh"><div class="st">🗄️ Akses Cepat Database</div></div>
+        <div class="sb">
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <button class="btn btn-p" style="width:100%;text-align:left;display:flex;align-items:center;gap:8px;" onclick="sw('ref',document.querySelectorAll('.nav .tb')[2])">🗄️ Database Penyedia / Rekanan <span style="margin-left:auto;opacity:.7;font-size:11px;" id="db-quick">— rekanan</span></button>
+            <button class="btn btn-v" style="width:100%;text-align:left;display:flex;align-items:center;gap:8px;" onclick="sw('rekening',document.querySelectorAll('.nav .tb')[3])">📂 Kode Rekening & Sub Kegiatan <span style="margin-left:auto;opacity:.7;font-size:11px;" id="rek-quick">— kode</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TRACKING SPJ ============ -->
+<div id="tab-tracking" class="tab-c">
+  <div class="sec">
+    <div class="sh">
+      <div class="st">📋 Tracking Progress SPJ — SAKTI BLUD 2026</div>
+      <span class="badge bb" id="spj-count">29 SPJ</span>
+    </div>
+    <div class="sb" style="padding-bottom:8px;">
+      <div class="fbar">
+        <input class="search-box" type="text" placeholder="🔍 Cari penerima / nomor dokumen..." oninput="filterSPJ()" id="spj-q" style="width:220px;">
+        <select onchange="filterSPJ()" id="fil-bln"><option value="">Semua Bulan</option><option>FEBRUARI</option><option>MARET</option><option>APRIL</option></select>
+        <select onchange="filterSPJ()" id="fil-sek"><option value="">Semua Seksi</option><option>TATA USAHA</option><option>PENUNJANG LAYANAN</option><option>PELAYANAN DAN MUTU</option></select>
+        <select onchange="filterSPJ()" id="fil-prg"><option value="">Semua Progress</option><option value="100%">100% Selesai</option><option value="80%">80% Proses</option></select>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th style="text-align:center">No</th><th>Bln</th><th>Tgl Masuk</th><th>No Dokumen</th><th>Seksi</th><th>Nama Penerima</th><th>Kegiatan</th><th>Jml Terima</th><th>PPh</th><th>Jml Bayar</th><th>Bank</th><th>Tgl Bayar</th><th>Status</th><th>Progress</th></tr></thead>
+          <tbody id="spj-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DATABASE REF ============ -->
+<div id="tab-ref" class="tab-c">
+  <div class="info-box">💡 <strong>Database Penyedia / Rekanan</strong> — data identitas lengkap rekanan tersimpan permanen. Pilih rekanan saat input SPJ agar NPWP, NITKU, No. Rekening & Bank otomatis terisi.</div>
+  <div class="sec">
+    <div class="sh">
+      <div class="st">🗄️ Database Identitas Penyedia</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <input class="search-box" type="text" placeholder="🔍 Cari nama / bank..." oninput="filterREF()" id="ref-q" style="width:180px;">
+        <button class="btn btn-p" onclick="openRefModal()">➕ Tambah Rekanan</button>
+        <button class="btn btn-out" onclick="exportCSV('ref')">⬇️ Export CSV</button>
+      </div>
+    </div>
+    <div class="sb" style="padding:0;">
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th style="text-align:center">#</th><th>Nama Penerima</th><th>No Rekening</th><th>Nama Bank</th><th>NPWP</th><th>NITKU</th><th>Aksi</th></tr></thead>
+          <tbody id="ref-tbody"></tbody>
+        </table>
+      </div>
+      <div id="ref-empty" style="text-align:center;padding:30px;color:var(--sub);display:none;"><div style="font-size:32px;margin-bottom:8px;">🗄️</div><div>Belum ada data. Klik <strong>Tambah Rekanan</strong> untuk mulai.</div></div>
+    </div>
+    <div style="padding:10px 16px;border-top:1px solid var(--bdr);background:#f8fafc;font-size:11px;color:var(--sub);">Total: <strong id="ref-total">0</strong> rekanan tersimpan &nbsp;·&nbsp; 💾 Data tersimpan permanen</div>
+  </div>
+  <div class="sec" id="ref-detail-sec" style="display:none;">
+    <div class="sh"><div class="st">📄 Detail Rekanan</div><button class="btn btn-out btn-sm" onclick="document.getElementById('ref-detail-sec').style.display='none'">✕ Tutup</button></div>
+    <div class="sb" id="ref-detail-body"></div>
+  </div>
+</div>
+
+<!-- ============ KODE REKENING ============ -->
+<div id="tab-rekening" class="tab-c">
+  <div class="info-box">💡 <strong>Referensi Kode Rekening & Sub Kegiatan</strong> — database kode anggaran BLUD yang digunakan sebagai acuan input SPJ. Data tersimpan permanen dan dapat ditambah/edit kapan saja.</div>
+
+  <!-- Sub-nav filter jenis -->
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px;">
+    <div class="sub-nav" id="rek-subnav">
+      <button class="sntb on" onclick="filterRek('',this)">🗂️ Semua</button>
+      <button class="sntb" onclick="filterRek('Belanja Barang dan Jasa BLUD',this)">🔵 Belanja Barang & Jasa</button>
+      <button class="sntb" onclick="filterRek('Belanja Modal Peralatan dan Mesin BLUD',this)">🟢 Belanja Modal</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <input class="search-box" type="text" placeholder="🔍 Cari kode / nama kegiatan..." oninput="searchRek()" id="rek-q" style="width:200px;">
+      <button class="btn btn-v" onclick="openRekModal()">➕ Tambah Kode</button>
+      <button class="btn btn-out" onclick="exportCSV('rek')">⬇️ Export CSV</button>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sh">
+      <div class="st">📂 Kode Rekening & Sub Kegiatan BLUD</div>
+      <span class="badge bv" id="rek-count-badge">— kode</span>
+    </div>
+    <div class="sb" style="padding:0;">
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th style="text-align:center">#</th><th>Kode Rekening</th><th>Sub Kegiatan / Uraian</th><th>Jenis Kegiatan</th><th>Aksi</th></tr></thead>
+          <tbody id="rek-tbody"></tbody>
+        </table>
+      </div>
+      <div id="rek-empty" style="text-align:center;padding:30px;color:var(--sub);display:none;"><div style="font-size:32px;margin-bottom:8px;">📂</div><div>Belum ada data kode rekening. Klik <strong>Tambah Kode</strong> untuk mulai.</div></div>
+    </div>
+    <div style="padding:10px 16px;border-top:1px solid var(--bdr);background:#f8fafc;font-size:11px;color:var(--sub);">Total: <strong id="rek-total">0</strong> kode rekening tersimpan &nbsp;·&nbsp; 💾 Data tersimpan permanen</div>
+  </div>
+</div>
+
+<!-- ============ REKAP ============ -->
+<div id="tab-rekap" class="tab-c">
+  <div class="sg">
+    <div class="sc g"><div class="sl">Belanja Pegawai + Honor</div><div class="sv" style="font-size:15px">Rp 867 Jt</div><div class="ss">Yankes ASN/Non-ASN + Honor</div></div>
+    <div class="sc o"><div class="sl">Belanja Barang/Jasa</div><div class="sv" style="font-size:15px">Rp 316 Jt</div><div class="ss">Obat, Bahan, Pihak Ketiga</div></div>
+    <div class="sc r"><div class="sl">Belanja Modal</div><div class="sv" style="font-size:15px">Rp 374 Jt</div><div class="ss">Alat Kedokteran, Komputer</div></div>
+    <div class="sc"><div class="sl">Total Pajak Dipotong</div><div class="sv" style="font-size:15px">Rp 82 Jt</div><div class="ss">PPN + PPh</div></div>
+  </div>
+  <div class="sec">
+    <div class="sh"><div class="st">📊 Rekap Jenis Belanja</div></div>
+    <div class="sb">
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Jenis Belanja</th><th>Jml SPJ</th><th>Total Nilai</th><th>PPN</th><th>PPh</th><th>Total Dibayar</th><th>Porsi</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge bb">Jasa Yankes ASN/Non-ASN</span></td><td>8</td><td style="font-family:monospace">Rp 813.155.326</td><td>—</td><td style="font-family:monospace">Rp 36.056.248</td><td style="font-family:monospace;font-weight:700;color:var(--ac)">Rp 777.099.078</td><td><div class="prog-bar"><div class="pf c1" style="width:52%"></div></div></td></tr>
+            <tr><td><span class="badge bg">Obat-Obatan</span></td><td>28</td><td style="font-family:monospace">Rp 191.234.982</td><td style="font-family:monospace">Rp 18.848.000</td><td style="font-family:monospace">Rp 2.560.500</td><td style="font-family:monospace;font-weight:700;color:var(--ac)">Rp 169.826.482</td><td><div class="prog-bar"><div class="pf c1" style="width:12%"></div></div></td></tr>
+            <tr><td><span class="badge bo">Bahan-bahan Lainnya</span></td><td>18</td><td style="font-family:monospace">Rp 124.893.019</td><td style="font-family:monospace">Rp 12.311.000</td><td style="font-family:monospace">Rp 1.673.600</td><td style="font-family:monospace;font-weight:700;color:var(--ac)">Rp 110.908.419</td><td><div class="prog-bar"><div class="pf c8" style="width:8%"></div></div></td></tr>
+            <tr><td><span class="badge br">Belanja Modal</span></td><td>11</td><td style="font-family:monospace">Rp 374.094.826</td><td style="font-family:monospace">Rp 37.046.000</td><td style="font-family:monospace">Rp 5.051.000</td><td style="font-family:monospace;font-weight:700;color:var(--ac)">Rp 331.997.826</td><td><div class="prog-bar"><div class="pf c8" style="width:24%"></div></div></td></tr>
+            <tr><td><span class="badge bw">Honor Pengelola Keuangan</span></td><td>8</td><td style="font-family:monospace">Rp 26.382.000</td><td>—</td><td style="font-family:monospace">Rp 2.306.600</td><td style="font-family:monospace;font-weight:700;color:var(--ac)">Rp 24.075.400</td><td><div class="prog-bar"><div class="pf c8" style="width:2%"></div></div></td></tr>
+            <tr><td><span class="badge bw">Jasa Pihak Ketiga</span></td><td>27</td><td style="font-family:monospace">Rp 82.374.900</td><td>—</td><td>—</td><td style="font-family:monospace;font-weight:700;color:var(--ac)">Rp 82.374.900</td><td><div class="prog-bar"><div class="pf c8" style="width:5%"></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- main end -->
+
+<!-- ===== MODAL REF ===== -->
+<div class="overlay" id="modal-ref">
+  <div class="modal">
+    <div class="mh"><h3 id="ref-modal-title">➕ Tambah Rekanan</h3><button class="close-btn" onclick="closeModal('modal-ref')">✕</button></div>
+    <div class="mc">
+      <input type="hidden" id="ref-edit-id">
+      <div class="grid2">
+        <div class="fg" style="grid-column:1/-1;">
+          <label>Nama Penerima / Rekanan *</label>
+          <input id="f-nama" placeholder="Contoh: PT KIMIA FARMA TRADING" oninput="this.value=this.value.toUpperCase()">
+        </div>
+        <div class="fg">
+          <label>No. Rekening *</label>
+          <input id="f-rek" placeholder="Nomor rekening">
+        </div>
+        <div class="fg">
+          <label>Nama Bank *</label>
+          <select id="f-bank">
+            <option value="">— Pilih Bank —</option>
+            <option>KALBAR</option><option>BCA</option><option>BRI</option><option>BNI</option>
+            <option>MANDIRI</option><option>BTN</option><option>DANAMON</option><option>STANCHART</option>
+            <option>OCBC NISP</option><option>OCBC NISP PONTIANAK</option><option>BANK PERMATA</option>
+            <option>BANK JATIM</option><option>LAINNYA</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>NPWP</label>
+          <input id="f-npwp" placeholder="0000000000000000">
+        </div>
+        <div class="fg">
+          <label>NITKU</label>
+          <input id="f-nitku" placeholder="0000000000000000000000">
+        </div>
+      </div>
+    </div>
+    <div class="mf">
+      <button class="btn btn-out" onclick="closeModal('modal-ref')">Batal</button>
+      <button class="btn btn-p" onclick="saveREF()">💾 Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL KODE REKENING ===== -->
+<div class="overlay" id="modal-rek">
+  <div class="modal">
+    <div class="mh"><h3 id="rek-modal-title">➕ Tambah Kode Rekening</h3><button class="close-btn" onclick="closeModal('modal-rek')">✕</button></div>
+    <div class="mc">
+      <input type="hidden" id="rek-edit-id">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="fg">
+          <label>Kode Rekening *</label>
+          <input id="rk-kode" placeholder="Contoh: 5.1.02.01.01.0012" style="font-family:monospace;font-size:13px;font-weight:700;">
+        </div>
+        <div class="fg">
+          <label>Sub Kegiatan / Uraian *</label>
+          <input id="rk-sub" placeholder="Contoh: Belanja Bahan-bahan Lainnya">
+        </div>
+        <div class="fg">
+          <label>Jenis Kegiatan</label>
+          <select id="rk-jenis">
+            <option value="">— Pilih Jenis —</option>
+            <option>Belanja Barang dan Jasa BLUD</option>
+            <option>Belanja Modal Peralatan dan Mesin BLUD</option>
+            <option>Belanja Pegawai BLUD</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="mf">
+      <button class="btn btn-out" onclick="closeModal('modal-rek')">Batal</button>
+      <button class="btn btn-v" onclick="saveRek()">💾 Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL HAPUS ===== -->
+<div class="overlay" id="modal-del">
+  <div class="modal" style="max-width:380px;">
+    <div class="mh"><h3>🗑️ Konfirmasi Hapus</h3><button class="close-btn" onclick="closeModal('modal-del')">✕</button></div>
+    <div class="mc"><p style="color:var(--sub);line-height:1.6;">Yakin ingin menghapus <strong id="del-name"></strong>? Data tidak dapat dikembalikan.</p></div>
+    <div class="mf">
+      <button class="btn btn-out" onclick="closeModal('modal-del')">Batal</button>
+      <button class="btn btn-r" onclick="confirmDelete()">🗑️ Hapus</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// =====================================================
+// STORAGE KEYS
+// =====================================================
+const KEY_REF = 'sakti-ref-2026';
+const KEY_REK = 'sakti-rekening-2026';
+
+// =====================================================
+// DEFAULT DATA — PENYEDIA / REKANAN
+// =====================================================
+const DEFAULT_REF = [
+  {id:'r001',nama:'COBRA DENTAL INDONES',rek:'1370007719178',bank:'MANDIRI',npwp:'0023361561541000',nitku:'0023361561541000000000'},
+  {id:'r002',nama:'ALMAAS BORNEO JAYA, PT',rek:'1704000665',bank:'KALBAR',npwp:'0032083305701000',nitku:'0032083305701000000000'},
+  {id:'r003',nama:'FULKI HASYA',rek:'1800044333666',bank:'MANDIRI',npwp:'0210381331425000',nitku:''},
+  {id:'r004',nama:'PT ALFA QINAN ANUGERAH MANDIRI',rek:'009801004241302',bank:'BRI',npwp:'0805576022323000',nitku:''},
+  {id:'r005',nama:'INDO TEKHNOPLUS PT',rek:'6800235250',bank:'BCA',npwp:'0023895501411000',nitku:''},
+  {id:'r006',nama:'PT SAUDARA BERKAH CEMERLANG',rek:'7295145331',bank:'BCA',npwp:'0001431857707000',nitku:''},
+  {id:'r007',nama:'AOMA PRIMA MEDIKA PT',rek:'8710228010',bank:'BCA',npwp:'0948444195003000',nitku:'0948444195003000000000'},
+  {id:'r008',nama:'ZAYN REYCHI ETERNAL PT',rek:'7391866388',bank:'BCA',npwp:'0399807742435000',nitku:''},
+  {id:'r009',nama:'PT. ZRAFINDO SEJAHTERA',rek:'1270011854773',bank:'MANDIRI',npwp:'0627604366061000',nitku:''},
+  {id:'r010',nama:'ANUGRAH ARGON MEDICA PT',rek:'0290777755',bank:'BCA',npwp:'0011297371411000',nitku:'0011297371411000000000'},
+  {id:'r011',nama:'MERAPI UTAMA PHARMA,PT',rek:'1802000185',bank:'KALBAR',npwp:'0013132576073000',nitku:'0013132576073000000007'},
+  {id:'r012',nama:'BINA SAN PRIMA',rek:'1460006494418',bank:'MANDIRI',npwp:'0015887250092000',nitku:'0015887250092000000000'},
+  {id:'r013',nama:'PENTA VALENT',rek:'1460091017165',bank:'MANDIRI',npwp:'0013054366056000',nitku:'0013054366056000000000'},
+  {id:'r014',nama:'PARIT PADANG GLOBAL, PT',rek:'1004022480',bank:'KALBAR',npwp:'0029985207007000',nitku:'0029985207007000000000'},
+  {id:'r015',nama:'PT ENSEVAL PUTERA MEGATRADING',rek:'1112516537',bank:'KALBAR',npwp:'0013425723054000',nitku:'0013425723054000000000'},
+  {id:'r016',nama:'MEGATAMA MANDIRI KHATULISTIWA',rek:'1004029620',bank:'KALBAR',npwp:'0728912163701000',nitku:'0728912163701000000000'},
+  {id:'r017',nama:'UDD PMI PONTIANAK',rek:'1009001308',bank:'KALBAR',npwp:'',nitku:''},
+  {id:'r018',nama:'PT MITRA PRAMITA MEDIKA',rek:'0299020004',bank:'BCA',npwp:'',nitku:''},
+  {id:'r019',nama:'INSTRUKTUR SENAM (EKA SUDIYAWATI)',rek:'1525050561',bank:'KALBAR',npwp:'6171054806730006',nitku:''},
+  {id:'r020',nama:'ABADINUSAUSAHASEMESTA PT',rek:'0023225643',bank:'BCA',npwp:'0015542038073000',nitku:'0015542038073000000000'},
+  {id:'r021',nama:'MILLENNIUM PHARMACON INT',rek:'1710644400',bank:'BCA',npwp:'0013008610054000',nitku:'0013008610054000000000'},
+  {id:'r022',nama:'MEGAH ALKESINDO',rek:'0132182365',bank:'BNI',npwp:'0025275306017000',nitku:''},
+  {id:'r023',nama:'PT. BUANA MEDISTRA PHARMA',rek:'260800003881',bank:'OCBC NISP PONTIANAK',npwp:'0016672826701000',nitku:'0016672826701000000000'},
+  {id:'r024',nama:'RPL 042 BLU UNTAN UT',rek:'4201308887770',bank:'BTN',npwp:'',nitku:''},
+  {id:'r025',nama:'PT. KAPUAS PERMATA MEDIFARMA',rek:'260800002990',bank:'OCBC NISP PONTIANAK',npwp:'0033523382701000',nitku:'0033523382701000000000'},
+  {id:'r026',nama:'KAPUAS PERMATA MEDIFARMA, PT',rek:'1004028798',bank:'KALBAR',npwp:'0033523382701000',nitku:'0033523382701000000000'},
+  {id:'r027',nama:'KAPUAS PERMATA MEDIFARMA',rek:'0299999761',bank:'BCA',npwp:'0033523382701000',nitku:'0033523382701000000000'},
+  {id:'r028',nama:'RAJAWALI NUSINDO,PT',rek:'1004039033',bank:'KALBAR',npwp:'0010612489051000',nitku:''},
+  {id:'r029',nama:'BERKAH HANCO MULIA',rek:'179001000219566',bank:'BRI',npwp:'0656840261451000',nitku:'0656840261451000000000'},
+  {id:'r030',nama:'PT INTISUMBER HASIL SEMPURNA GLOBAL',rek:'8981304438543',bank:'MANDIRI',npwp:'0936113042618000',nitku:''},
+  {id:'r031',nama:'MENSA BINASUKSES',rek:'1460005137802',bank:'MANDIRI',npwp:'0013157086007000',nitku:'0013157086007000000000'},
+  {id:'r032',nama:'PT ANUGERAH PHARMINDO LESTARI',rek:'8559001972337062',bank:'STANCHART',npwp:'0013695184092000',nitku:'0013695184092000000000'},
+  {id:'r033',nama:'GLOPER PRIMA MANDIRI',rek:'1460078978983',bank:'MANDIRI',npwp:'0032319170701000',nitku:'0032319170701000000000'},
+  {id:'r034',nama:'DYRSA INTERNATIONAL',rek:'1320017548752',bank:'MANDIRI',npwp:'0031356785001000',nitku:'0031356785001000000000'},
+  {id:'r035',nama:'PT KIMIA FARMA TRADI',rek:'007101001022307',bank:'BRI',npwp:'0010612281051000',nitku:'0010612281051000000000'},
+  {id:'r036',nama:'KEBAYORAN PHARMA PT',rek:'1710892012',bank:'BCA',npwp:'0013085063073000',nitku:'0013085063073000000000'},
+  {id:'r037',nama:'DWICENTRA CAHAYA WIG',rek:'1460004902669',bank:'MANDIRI',npwp:'',nitku:''},
+  {id:'r038',nama:'PT COMAL MULIA ABADI',rek:'224101000613300',bank:'BRI',npwp:'',nitku:''},
+  {id:'r039',nama:'CITRA MANDIRI GASINDO, PT',rek:'1021909994',bank:'KALBAR',npwp:'0754448728701000',nitku:'0754448728701000000000'},
+  {id:'r040',nama:'CITRA MANDIRI GASINDO, PT (CITRA OASIS ALKESINDO)',rek:'1021558661',bank:'KALBAR',npwp:'0754448728701000',nitku:'0754448728701000000000'},
+  {id:'r041',nama:'BADAN KHUSUS PKEL (PME LAB)',rek:'1170006335707',bank:'MANDIRI',npwp:'',nitku:''},
+  {id:'r042',nama:'DAUN HIJAU NUSINDO PT',rek:'0888212101',bank:'BCA',npwp:'0410378434606000',nitku:''},
+  {id:'r043',nama:'KHATULISTIWA EKA PRATAMA, PT',rek:'1021341700',bank:'KALBAR',npwp:'0862145240701000',nitku:'0862145240701000000000'},
+  {id:'r044',nama:"TRI SAPTA JAYA' PT",rek:'54941471',bank:'DANAMON',npwp:'0013059670007000',nitku:'0013059670007000000000'},
+  {id:'r045',nama:'PT TEMPO',rek:'0293080183',bank:'BCA',npwp:'0013018080062000',nitku:''},
+  {id:'r046',nama:'PT. DUTA BUMI MEDIKA',rek:'260800011793',bank:'OCBC NISP',npwp:'0603894221707000',nitku:'0603894221707000000000'},
+  {id:'r047',nama:'ENDO INDONESIA PT',rek:'2150213188',bank:'BCA',npwp:'0021141866618000',nitku:'0021141866618000000000'},
+  {id:'r048',nama:'MAK PITA KUNINGKU (DARYATMI)',rek:'1225005687',bank:'KALBAR',npwp:'6171045405980006',nitku:''},
+  {id:'r049',nama:'JURI LOMBA (SRI ASTUTI NURJANAH)',rek:'1025380301',bank:'KALBAR',npwp:'6171025511770002',nitku:''},
+  {id:'r050',nama:'SINAR TERANG, CV',rek:'1004004287',bank:'KALBAR',npwp:'0027647908701000',nitku:'0027647908701000000000'},
+  {id:'r051',nama:'HANESA UNGGUL MEDIKA PT',rek:'7345161279',bank:'BCA',npwp:'0601634199707000',nitku:'0601634199707000000000'},
+  {id:'r052',nama:'TAMPUNGAN PDAM TIRTA K WILAYAH I SIANTAN',rek:'0004201390003340',bank:'BTN',npwp:'',nitku:''},
+  {id:'r053',nama:'MITRA HIJAU ASIA',rek:'1480014551462',bank:'MANDIRI',npwp:'0713158962804000',nitku:'0713158962804000000000'},
+  {id:'r054',nama:'SEMBILAN TITIK NOL,CV',rek:'1021436506',bank:'KALBAR',npwp:'0998149363701000',nitku:''},
+  {id:'r055',nama:'SPECTRO GAS INDUSTRI PT',rek:'1710933177',bank:'BCA',npwp:'0739613180701000',nitku:'0739613180701000000000'},
+  {id:'r056',nama:'NORMA DIAGNOSTIKA INDONESIA PT',rek:'1439716417',bank:'BNI',npwp:'0666294020008000',nitku:'0666294020008000000000'},
+  {id:'r057',nama:'SABA INDOMEDIKA PT',rek:'0093045561',bank:'BCA',npwp:'0024050049038000',nitku:'0024050049038000000000'},
+  {id:'r058',nama:'DISTRIVERSA BUANAMAS',rek:'1210005478841',bank:'MANDIRI',npwp:'0015552045004000',nitku:'0015552045004000000000'},
+  {id:'r059',nama:'GLOBAL ARTHA SUKSES',rek:'140901000395309',bank:'BRI',npwp:'0391447026042000',nitku:'0391447026042000000000'},
+  {id:'r060',nama:'ANUGERAH GLOBAL SUKS',rek:'1420001869998',bank:'MANDIRI',npwp:'0317422871607000',nitku:'0317422871607000000000'},
+  {id:'r061',nama:'AGUNG PHARMINDO INDONESIA, PT',rek:'1704000738',bank:'KALBAR',npwp:'0865408124707000',nitku:'0865408124707000000000'},
+  {id:'r062',nama:'WINDA BULHANI HAMIDA',rek:'481901015681539',bank:'BRI',npwp:'6102155205850002',nitku:''},
+  {id:'r063',nama:'MULYADI',rek:'1221038581',bank:'KALBAR',npwp:'6171040709920007',nitku:''},
+  {id:'r064',nama:'SAPTA SARI TAMA PT',rek:'1710437722',bank:'BCA',npwp:'0011063013441000',nitku:'0011063013441000000000'},
+  {id:'r065',nama:'KHATULISTIWA INTI SUKSES',rek:'1711224128',bank:'BCA',npwp:'0418069407707000',nitku:'0418069407707000000000'},
+  {id:'r066',nama:'RSU.DR.SOEDARSO',rek:'1021190899',bank:'KALBAR',npwp:'',nitku:''},
+  {id:'r067',nama:'AKSARA INDAH MEDIA (MUHAMMAD MAULANA ZULKARNAIN)',rek:'1021252910',bank:'KALBAR',npwp:'0108991936701000',nitku:'0108991936701000000000'},
+  {id:'r068',nama:'BUANA INTIPRIMA USAHA PT',rek:'5930812872',bank:'BCA',npwp:'0819963059034000',nitku:'0819963059034000000000'},
+  {id:'r069',nama:'LPPSP - RSUD PONTIANAK UTARA',rek:'9888978972511279',bank:'BNI',npwp:'0024867707412000',nitku:'0024867707412000000000'},
+  {id:'r070',nama:'FORTA MITRA SEJATI PT',rek:'6241999987',bank:'BCA',npwp:'0020812475441000',nitku:'0020812475441000000000'},
+  {id:'r071',nama:'FARID MITRA UTAMA',rek:'200901000552304',bank:'BRI',npwp:'',nitku:''},
+  {id:'r072',nama:'FERA WAHYUNIASIH',rek:'1152808701',bank:'KALBAR',npwp:'6112015206780019',nitku:''},
+  {id:'r073',nama:'RPL 182 BLU BB BINOMIKA UTK OPS PENERIMAAN',rek:'9883913726211048',bank:'BNI',npwp:'',nitku:''},
+  {id:'r074',nama:'BUANA INTIPRIMA MEDIKA P',rek:'2297676888',bank:'BCA',npwp:'0917574246034000',nitku:'0917574246034000000000'},
+  {id:'r075',nama:'LAWSIM ZECHA PT',rek:'5790178787',bank:'BCA',npwp:'0013032826007000',nitku:'0013032826007000000000'},
+  {id:'r076',nama:'FARMA HUSADA MILLENNIA PT',rek:'0031021677',bank:'BANK JATIM',npwp:'0019477157626000',nitku:'0019477157626000000000'},
+  {id:'r077',nama:'CAHAYA MUDA, CV',rek:'1004035667',bank:'KALBAR',npwp:'0017816661701000',nitku:'0017816661701000000000'},
+  {id:'r078',nama:'PT GLOBAL MEDIK PERSADA',rek:'702335361',bank:'BANK PERMATA',npwp:'0315677799416000',nitku:'0315677799416000000000'},
+  {id:'r079',nama:'SUPERINTENDING COMPANY OF INDONESIA PT (SUCOFINDO)',rek:'0076045115',bank:'BNI',npwp:'0013009923093000',nitku:'0013009923093000000000'},
+  {id:'r080',nama:'SRIKANDI TITY KHATULISTIWA,CV',rek:'1004052338',bank:'KALBAR',npwp:'1091031211238062',nitku:'1091031211238062000000'},
+  {id:'r081',nama:'JASA KESELAMATAN RADIASI DAN LINGKUNGAN (UPT RSUD PU)',rek:'89029120261499',bank:'MANDIRI',npwp:'0026550640016000',nitku:'0026550640016000000000'},
+  {id:'r082',nama:'MITRA INTI MEDIKA PT',rek:'0713016095',bank:'BCA',npwp:'0026231282019000',nitku:'0026231282019000000000'},
+  {id:'r083',nama:'BUANA KREASINDO UTAMA PT',rek:'7090099633',bank:'BCA',npwp:'0422575399416000',nitku:'0422575399416000000000'},
+  {id:'r084',nama:'HOME CENTER INDONESIA PT',rek:'7090000688',bank:'BCA',npwp:'0023415557038000',nitku:'0023415557038000000000'},
+  {id:'r085',nama:'ADMINISTRASI MEDIKA',rek:'0700006400415',bank:'MANDIRI',npwp:'0020976221073000',nitku:'0020976221073000000000'},
+  {id:'r086',nama:'PRODIA WIDYAHUSADA PT',rek:'1910107077',bank:'BCA',npwp:'',nitku:''},
+];
+
+// =====================================================
+// DEFAULT DATA — KODE REKENING
+// =====================================================
+const DEFAULT_REK = [
+  {id:'k001',kode:'5.1.02.01.01.0052',sub:'Belanja Makanan dan Minuman Rapat',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k002',kode:'5.1.02.01.01.0012',sub:'Belanja Bahan-bahan Lainnya',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k003',kode:'5.1.02.02.01.0014',sub:'Belanja Jasa Tenaga Kesehatan',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k004',kode:'5.1.02.02.01.0029',sub:'Belanja Jasa Tenaga Ahli',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k005',kode:'5.1.02.02.01.0029',sub:'Belanja Jasa Tenaga Ahli (TLD)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k006',kode:'5.1.02.04.01.0003',sub:'Belanja Perjalanan Dinas Dalam Kota',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k007',kode:'5.1.02.01.01.0037',sub:'Belanja Obat-Obatan-Obat',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k008',kode:'5.1.02.02.01.0042',sub:'Belanja Jasa Pelaksanaan Transaksi Keuangan',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k009',kode:'5.1.02.03.02.0204',sub:'Belanja Pemeliharaan Alat Kedokteran dan Kesehatan-Alat Kedokteran Umum',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k010',kode:'5.1.02.02.01.0080',sub:'Belanja Honorarium Penanggungjawaban Pengelola Keuangan (Honor KPA BLUD)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k011',kode:'5.1.02.02.01.0080',sub:'Belanja Honorarium Penanggungjawaban Pengelola Keuangan (Honor PPKeu BLUD)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k012',kode:'5.1.02.02.01.0080',sub:'Belanja Honorarium Penanggungjawaban Pengelola Keuangan (Honor Bendahara Pengeluaran BLUD)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k013',kode:'5.1.02.02.01.0080',sub:'Belanja Honorarium Penanggungjawaban Pengelola Keuangan (Honor Bendahara Penerimaan BLUD)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k014',kode:'5.1.02.02.01.0080',sub:'Belanja Honorarium Penanggungjawaban Pengelola Keuangan (Honor Pejabat Teknis)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k015',kode:'5.1.02.02.01.0081',sub:'Belanja Honorarium Pengadaan Barang/Jasa',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k016',kode:'5.1.02.02.05.0025',sub:'Belanja Sewa Bangunan Terbuka',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k017',kode:'5.1.02.05.02.0001',sub:'Belanja Jasa yang Diberikan kepada Pihak Ketiga/Pihak Lain',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k018',kode:'5.1.02.05.02.0001',sub:'Belanja Jasa yang Diberikan kepada Pihak Ketiga/Pihak Lain (Belanja Jasa Dekorasi)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k019',kode:'5.1.02.05.02.0001',sub:'Belanja Jasa yang Diberikan kepada Pihak Ketiga/Pihak Lain (Pemeliharaan Software SIMRS)',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k020',kode:'5.2.02.05.01.0004',sub:'Belanja Jasa yang Diberikan kepada Pihak Ketiga/Pihak Lain (Pemeliharaan Software SIMRS)',jenis:'Belanja Modal Peralatan dan Mesin BLUD'},
+  {id:'k021',kode:'5.2.02.05.02.0001',sub:'Belanja Modal Mebel',jenis:'Belanja Modal Peralatan dan Mesin BLUD'},
+  {id:'k022',kode:'5.2.02.05.02.0004',sub:'Belanja Modal Alat Pendingin',jenis:'Belanja Modal Peralatan dan Mesin BLUD'},
+  {id:'k023',kode:'5.2.02.05.02.0006',sub:'Belanja Modal Alat Rumah Tangga Lainnya (Home Use)',jenis:'Belanja Modal Peralatan dan Mesin BLUD'},
+  {id:'k024',kode:'5.2.02.07.01.0001',sub:'Belanja Modal Alat Kedokteran Umum',jenis:'Belanja Modal Peralatan dan Mesin BLUD'},
+  {id:'k025',kode:'5.2.02.10.01.0002',sub:'Belanja Modal Personal Komputer',jenis:'Belanja Modal Peralatan dan Mesin BLUD'},
+  {id:'k026',kode:'5.2.02.05.01.0004',sub:'Belanja Modal Alat Penyimpan Perlengkapan Kantor',jenis:'Belanja Modal Peralatan dan Mesin BLUD'},
+  {id:'k027',kode:'5.1.01.03.06.0001',sub:'Belanja Jasa Pelayanan Kesehatan Bagi ASN Bulan September 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k028',kode:'5.1.01.03.06.0001',sub:'Belanja Jasa Pelayanan Kesehatan Bagi ASN Bulan Oktober 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k029',kode:'5.1.01.03.06.0001',sub:'Belanja Jasa Pelayanan Kesehatan Bagi ASN Bulan November 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k030',kode:'5.1.01.03.06.0001',sub:'Belanja Jasa Pelayanan Kesehatan Bagi ASN Bulan Desember 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k031',kode:'5.1.02.02.01.0077',sub:'Belanja Jasa Pelayanan Kesehatan Bagi Non ASN Bulan September 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k032',kode:'5.1.02.02.01.0077',sub:'Belanja Jasa Pelayanan Kesehatan Bagi Non ASN Bulan Oktober 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k033',kode:'5.1.02.02.01.0077',sub:'Belanja Jasa Pelayanan Kesehatan Bagi Non ASN Bulan November 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k034',kode:'5.1.02.02.01.0077',sub:'Belanja Jasa Pelayanan Kesehatan Bagi Non ASN Bulan Desember 2025',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k035',kode:'5.1.01.03.06.0001',sub:'Belanja Jasa Pelayanan Kesehatan Bagi ASN Bulan Januari 2026',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k036',kode:'5.1.01.03.06.0001',sub:'Belanja Jasa Pelayanan Kesehatan Bagi ASN Bulan Februari 2026',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k037',kode:'5.1.01.03.06.0001',sub:'Belanja Jasa Pelayanan Kesehatan Bagi ASN Bulan Maret 2026',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k038',kode:'5.1.02.02.01.0077',sub:'Belanja Jasa Pelayanan Kesehatan Bagi Non ASN Bulan Januari 2026',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k039',kode:'5.1.02.02.01.0077',sub:'Belanja Jasa Pelayanan Kesehatan Bagi Non ASN Bulan Februari 2026',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k040',kode:'5.1.02.02.01.0077',sub:'Belanja Jasa Pelayanan Kesehatan Bagi Non ASN Bulan Maret 2026',jenis:'Belanja Barang dan Jasa BLUD'},
+  {id:'k041',kode:'5.1.02.02.01.0051',sub:'Belanja Jasa Pengolahan Sampah',jenis:'Belanja Barang dan Jasa BLUD'},
+];
+
+// =====================================================
+// STATE
+// =====================================================
+let refDB = [], rekDB = [];
+let deleteId = null, deleteType = null;
+let rekFilterJenis = '';
+
+// =====================================================
+// STORAGE
+// =====================================================
+async function loadAll() {
+  // REF
+  try {
+    const r = await window.storage.get(KEY_REF);
+    refDB = r ? JSON.parse(r.value) : [...DEFAULT_REF];
+    if(!r) await window.storage.set(KEY_REF, JSON.stringify(refDB));
+  } catch { refDB = [...DEFAULT_REF]; await window.storage.set(KEY_REF, JSON.stringify(refDB)).catch(()=>{}); }
+  // REK
+  try {
+    const r = await window.storage.get(KEY_REK);
+    rekDB = r ? JSON.parse(r.value) : [...DEFAULT_REK];
+    if(!r) await window.storage.set(KEY_REK, JSON.stringify(rekDB));
+  } catch { rekDB = [...DEFAULT_REK]; await window.storage.set(KEY_REK, JSON.stringify(rekDB)).catch(()=>{}); }
+
+  renderREF(); renderRek(); updateCounts();
+}
+
+async function saveStorage(key, data) {
+  try { await window.storage.set(key, JSON.stringify(data)); }
+  catch { showNotif('Gagal menyimpan!','err'); }
+}
+
+// =====================================================
+// UTILS
+// =====================================================
+const fmtRp = v => v ? 'Rp '+Math.round(v).toLocaleString('id-ID') : '—';
+function showNotif(msg, type='ok') {
+  const n = document.getElementById('notif');
+  n.textContent = msg; n.className = 'notif '+type+' show';
+  setTimeout(()=>n.classList.remove('show'), 2800);
+}
+function closeModal(id) { document.getElementById(id).classList.remove('on'); }
+function openOverlay(id) { document.getElementById(id).classList.add('on'); }
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',function(e){if(e.target===this)this.classList.remove('on');}));
+
+function sw(name, el) {
+  document.querySelectorAll('.tab-c').forEach(e=>e.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(e=>e.classList.remove('on'));
+  document.getElementById('tab-'+name).classList.add('on');
+  if(el) el.classList.add('on');
+}
+function updateCounts() {
+  document.getElementById('db-count').textContent = refDB.length;
+  document.getElementById('rek-count').textContent = rekDB.length;
+  document.getElementById('db-quick').textContent = refDB.length+' rekanan';
+  document.getElementById('rek-quick').textContent = rekDB.length+' kode';
+}
+
+// =====================================================
+// SPJ DATA
+// =====================================================
+const spjData = [
+  {no:1,bulan:'FEBRUARI',tgl:'11/02/2026',nodok:'900/01/KWITBLUD/II/2026',seksi:'TATA USAHA',penerima:'RESAFINA MELINDA SADOMO',kegiatan:'Jasa Yankes ASN Sep 2025',terima:127436835,pph:6024586,bayar:121412249,bank:'KALBAR',tglbayar:'11/02/2026',prog:'100%'},
+  {no:2,bulan:'FEBRUARI',tgl:'11/02/2026',nodok:'900/02/KWITBLUD/II/2026',seksi:'TATA USAHA',penerima:'RESAFINA MELINDA SADOMO',kegiatan:'Jasa Yankes ASN Okt 2025',terima:126469886,pph:6116385,bayar:120353501,bank:'KALBAR',tglbayar:'11/02/2026',prog:'100%'},
+  {no:9,bulan:'FEBRUARI',tgl:'08/12/2025',nodok:'900/09/KWITBLUD/II/2026',seksi:'TATA USAHA',penerima:'UDD PMI PONTIANAK',kegiatan:'Belanja Jasa Pihak Ketiga',terima:18130000,pph:0,bayar:18130000,bank:'KALBAR',tglbayar:'24/02/2026',prog:'100%'},
+  {no:16,bulan:'FEBRUARI',tgl:'10/02/2026',nodok:'900/16/KWITBLUD/II/2026',seksi:'PENUNJANG LAYANAN',penerima:'PT KIMIA FARMA TRADI',kegiatan:'Belanja Obat-Obatan',terima:2259072,pph:30528,bayar:2001772,bank:'BRI',tglbayar:'24/02/2026',prog:'100%'},
+  {no:21,bulan:'FEBRUARI',tgl:'10/02/2026',nodok:'900/21/KWITBLUD/II/2026',seksi:'PENUNJANG LAYANAN',penerima:'ANUGRAH ARGON MEDICA PT',kegiatan:'Belanja Bahan-bahan Lainnya',terima:3576864,pph:48336,bayar:3171164,bank:'BCA',tglbayar:'24/02/2026',prog:'100%'},
+  {no:26,bulan:'FEBRUARI',tgl:'25/02/2026',nodok:'900/26/KWITBLUD/II/2026',seksi:'PELAYANAN DAN MUTU',penerima:'PT. DUTA BUMI MEDIKA',kegiatan:'Belanja Bahan-bahan Lainnya',terima:4999995,pph:67568,bayar:4434033,bank:'OCBC NISP',tglbayar:'26/02/2026',prog:'100%'},
+  {no:27,bulan:'MARET',tgl:'03/03/2026',nodok:'900/01/KWITBLUD/III/2026',seksi:'TATA USAHA',penerima:'NUZULISA ZULKIFLI',kegiatan:'Honor KPA BLUD',terima:6840000,pph:1026000,bayar:5814000,bank:'KALBAR',tglbayar:'03/03/2026',prog:'80%'},
+  {no:28,bulan:'MARET',tgl:'03/03/2026',nodok:'900/02/KWITBLUD/III/2026',seksi:'TATA USAHA',penerima:'WINDI SUHESTI',kegiatan:'Honor PPKeu BLUD',terima:2640000,pph:396000,bayar:2244000,bank:'KALBAR',tglbayar:'03/03/2026',prog:'80%'},
+  {no:35,bulan:'MARET',tgl:'26/02/2026',nodok:'900/08/KWITBLUD/III/2026',seksi:'PENUNJANG LAYANAN',penerima:'PT ANUGERAH PHARMINDO LESTARI',kegiatan:'Belanja Obat-Obatan',terima:3798420,pph:51330,bayar:3367770,bank:'STANCHART',tglbayar:'09/03/2026',prog:'100%'},
+  {no:39,bulan:'MARET',tgl:'26/02/2026',nodok:'900/12/KWITBLUD/III/2026',seksi:'PENUNJANG LAYANAN',penerima:'MEGATAMA MANDIRI KHATULISTIWA',kegiatan:'Belanja Bahan-bahan Lainnya',terima:39543750,pph:534375,bayar:35090625,bank:'KALBAR',tglbayar:'09/03/2026',prog:'100%'},
+  {no:50,bulan:'MARET',tgl:'09/03/2026',nodok:'900/23/KWITBLUD/III/2026',seksi:'TATA USAHA',penerima:'MULYADI',kegiatan:'Belanja Modal Alat Pendingin',terima:37074000,pph:501000,bayar:32899000,bank:'KALBAR',tglbayar:'11/03/2026',prog:'100%'},
+  {no:51,bulan:'MARET',tgl:'04/03/2026',nodok:'900/22/KWITBLUD/III/2026',seksi:'PELAYANAN DAN MUTU',penerima:'ALMAAS BORNEO JAYA, PT',kegiatan:'Belanja Modal Alat Kedokteran',terima:7499160,pph:101340,bayar:6654660,bank:'KALBAR',tglbayar:'11/03/2026',prog:'100%'},
+  {no:62,bulan:'APRIL',tgl:'09/04/2026',nodok:'900/01/KWITBLUD/IV/2026',seksi:'TATA USAHA',penerima:'UDD PMI PONTIANAK',kegiatan:'Belanja Jasa Pihak Ketiga',terima:3430000,pph:0,bayar:3430000,bank:'KALBAR',tglbayar:'15/04/2026',prog:'80%'},
+  {no:71,bulan:'APRIL',tgl:'26/03/2026',nodok:'900/08/KWITBLUD/IV/2026',seksi:'PELAYANAN DAN MUTU',penerima:'KAPUAS PERMATA MEDIFARMA, PT',kegiatan:'Belanja Modal Alat Kedokteran',terima:20089907,pph:271485,bayar:17827530,bank:'KALBAR',tglbayar:'15/04/2026',prog:'80%'},
+  {no:76,bulan:'APRIL',tgl:'09/04/2026',nodok:'900/13/KWITBLUD/IV/2026',seksi:'PENUNJANG LAYANAN',penerima:'BINA SAN PRIMA',kegiatan:'Belanja Obat-Obatan',terima:4107000,pph:55500,bayar:3641600,bank:'MANDIRI',tglbayar:'15/04/2026',prog:'80%'},
+  {no:92,bulan:'APRIL',tgl:'13/04/2026',nodok:'900/29/KWITBLUD/IV/2026',seksi:'TATA USAHA',penerima:'CAHAYA MUDA, CV',kegiatan:'Belanja Modal Personal Komputer',terima:111888000,pph:1512000,bayar:99288000,bank:'KALBAR',tglbayar:'15/04/2026',prog:'80%'},
+  {no:96,bulan:'APRIL',tgl:'15/04/2026',nodok:'900/33/KWITBLUD/IV/2026',seksi:'PELAYANAN DAN MUTU',penerima:'PT GLOBAL MEDIK PERSADA',kegiatan:'Belanja Modal Alat Kedokteran',terima:31608000,pph:427135,bayar:28045641,bank:'BANK PERMATA',tglbayar:'15/04/2026',prog:'80%'},
+];
+
+function renderSPJ(rows) {
+  const tc=b=>b==='FEBRUARI'?'bb':b==='MARET'?'bg':'bo';
+  document.getElementById('spj-tbody').innerHTML = rows.map(d=>`
+    <tr>
+      <td style="color:var(--sub);font-weight:600;text-align:center">${d.no}</td>
+      <td><span class="badge ${tc(d.bulan)}">${d.bulan.slice(0,3)}</span></td>
+      <td>${d.tgl}</td>
+      <td style="font-family:monospace;font-size:11px;color:var(--sub)">${d.nodok}</td>
+      <td><span class="badge bw" style="font-size:10px">${d.seksi.split(' ')[0]}</span></td>
+      <td style="font-weight:600">${d.penerima}</td>
+      <td style="font-size:11px;color:var(--sub);max-width:160px">${d.kegiatan}</td>
+      <td style="font-family:monospace">${fmtRp(d.terima)}</td>
+      <td style="font-family:monospace;color:#d97706">${d.pph?fmtRp(d.pph):'—'}</td>
+      <td style="font-family:monospace;font-weight:700;color:var(--ac)">${fmtRp(d.bayar)}</td>
+      <td>${d.bank}</td>
+      <td>${d.tglbayar}</td>
+      <td><span style="background:#dcfce7;color:#166534;border-radius:20px;padding:2px 8px;font-size:10px;font-weight:700">LUNAS</span></td>
+      <td>
+        <div style="display:flex;align-items:center;gap:5px">
+          <div class="prog-bar" style="width:50px;margin:0"><div class="pf ${d.prog==='100%'?'c1':'c8'}" style="width:${d.prog}"></div></div>
+          <span style="font-size:11px;font-weight:700;color:${d.prog==='100%'?'var(--ac)':'#d97706'}">${d.prog}</span>
+        </div>
+      </td>
+    </tr>`).join('');
+  document.getElementById('spj-count').textContent = rows.length+' SPJ';
+}
+function filterSPJ() {
+  const q=document.getElementById('spj-q').value.toLowerCase(),
+        b=document.getElementById('fil-bln').value,
+        s=document.getElementById('fil-sek').value,
+        p=document.getElementById('fil-prg').value;
+  renderSPJ(spjData.filter(d=>
+    (!q||d.penerima.toLowerCase().includes(q)||d.nodok.toLowerCase().includes(q)||d.kegiatan.toLowerCase().includes(q))&&
+    (!b||d.bulan===b)&&(!s||d.seksi===s)&&(!p||d.prog===p)));
+}
+
+// =====================================================
+// DATABASE REF
+// =====================================================
+function renderREF(query='') {
+  const q=(query||document.getElementById('ref-q')?.value||'').toLowerCase();
+  const rows=refDB.filter(r=>!q||r.nama.toLowerCase().includes(q)||(r.bank||'').toLowerCase().includes(q)||(r.rek||'').includes(q));
+  document.getElementById('ref-tbody').innerHTML = rows.map((r,i)=>`
+    <tr>
+      <td style="color:var(--sub);font-weight:600;text-align:center">${i+1}</td>
+      <td style="font-weight:700;min-width:180px">${r.nama}</td>
+      <td style="font-family:monospace;font-weight:600;white-space:nowrap">${r.rek||'—'}</td>
+      <td><span class="badge bw">${r.bank||'—'}</span></td>
+      <td style="font-family:monospace;font-size:11px;white-space:nowrap">${r.npwp||'—'}</td>
+      <td style="font-family:monospace;font-size:10px;color:var(--sub);max-width:180px;word-break:break-all">${r.nitku||'—'}</td>
+      <td><div style="display:flex;gap:4px;flex-wrap:nowrap">
+        <button class="btn btn-o btn-sm" onclick="editREF('${r.id}')">✏️</button>
+        <button class="btn btn-r btn-sm" onclick="promptDel('${r.id}','ref')">🗑️</button>
+      </div></td>
+    </tr>`).join('');
+  document.getElementById('ref-empty').style.display=rows.length===0?'block':'none';
+  document.getElementById('ref-total').textContent=refDB.length;
+  updateCounts();
+}
+function filterREF(){renderREF();}
+
+function openRefModal(data=null) {
+  const isEdit=!!data;
+  document.getElementById('ref-modal-title').textContent=isEdit?'✏️ Edit Rekanan':'➕ Tambah Rekanan';
+  document.getElementById('ref-edit-id').value=data?.id||'';
+  document.getElementById('f-nama').value=data?.nama||'';
+  document.getElementById('f-rek').value=data?.rek||'';
+  document.getElementById('f-bank').value=data?.bank||'';
+  document.getElementById('f-npwp').value=data?.npwp||'';
+  document.getElementById('f-nitku').value=data?.nitku||'';
+  openOverlay('modal-ref');
+}
+function editREF(id){openRefModal(refDB.find(r=>r.id===id));}
+
+async function saveREF() {
+  const nama=document.getElementById('f-nama').value.trim().toUpperCase();
+  const rek=document.getElementById('f-rek').value.trim();
+  const bank=document.getElementById('f-bank').value;
+  if(!nama){showNotif('Nama penerima wajib diisi!','err');return;}
+  if(!rek){showNotif('No. rekening wajib diisi!','err');return;}
+  if(!bank){showNotif('Bank wajib dipilih!','err');return;}
+  const editId=document.getElementById('ref-edit-id').value;
+  const entry={id:editId||'r'+Date.now(),nama,rek,bank,
+    npwp:document.getElementById('f-npwp').value.trim(),
+    nitku:document.getElementById('f-nitku').value.trim()};
+  if(editId){const i=refDB.findIndex(r=>r.id===editId);if(i>-1)refDB[i]=entry;showNotif('✅ Rekanan diperbarui!');}
+  else{refDB.push(entry);showNotif('✅ Rekanan baru ditambahkan!');}
+  await saveStorage(KEY_REF,refDB);
+  renderREF(); closeModal('modal-ref');
+}
+
+// =====================================================
+// KODE REKENING
+// =====================================================
+function renderRek(filterJ='', query='') {
+  const q=(query||document.getElementById('rek-q')?.value||'').toLowerCase();
+  const j=filterJ!==undefined?filterJ:rekFilterJenis;
+  rekFilterJenis=j;
+  const rows=rekDB.filter(r=>
+    (!j||r.jenis===j)&&
+    (!q||r.kode.includes(q)||r.sub.toLowerCase().includes(q)||(r.jenis||'').toLowerCase().includes(q)));
+
+  const jenisChip=jenis=>jenis==='Belanja Barang dan Jasa BLUD'
+    ?'<span class="jenis-chip jenis-bj">Belanja Barang & Jasa</span>'
+    :jenis==='Belanja Modal Peralatan dan Mesin BLUD'
+    ?'<span class="jenis-chip jenis-bm">Belanja Modal</span>'
+    :`<span class="jenis-chip" style="background:#f1f5f9;color:#475569">${jenis||'—'}</span>`;
+
+  document.getElementById('rek-tbody').innerHTML = rows.map((r,i)=>`
+    <tr>
+      <td style="color:var(--sub);font-weight:600;text-align:center">${i+1}</td>
+      <td><span class="kode-chip">${r.kode}</span></td>
+      <td style="min-width:260px;line-height:1.5">${r.sub}</td>
+      <td>${jenisChip(r.jenis)}</td>
+      <td><div style="display:flex;gap:4px;flex-wrap:nowrap">
+        <button class="btn btn-o btn-sm" onclick="editRek('${r.id}')">✏️</button>
+        <button class="btn btn-r btn-sm" onclick="promptDel('${r.id}','rek')">🗑️</button>
+      </div></td>
+    </tr>`).join('');
+  document.getElementById('rek-empty').style.display=rows.length===0?'block':'none';
+  document.getElementById('rek-total').textContent=rekDB.length;
+  document.getElementById('rek-count-badge').textContent=rows.length+' kode';
+  document.getElementById('rek-count').textContent=rekDB.length;
+  updateCounts();
+}
+function searchRek(){renderRek(rekFilterJenis);}
+function filterRek(jenis,el){
+  document.querySelectorAll('.sntb').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on'); renderRek(jenis);
+}
+
+function openRekModal(data=null) {
+  const isEdit=!!data;
+  document.getElementById('rek-modal-title').textContent=isEdit?'✏️ Edit Kode Rekening':'➕ Tambah Kode Rekening';
+  document.getElementById('rek-edit-id').value=data?.id||'';
+  document.getElementById('rk-kode').value=data?.kode||'';
+  document.getElementById('rk-sub').value=data?.sub||'';
+  document.getElementById('rk-jenis').value=data?.jenis||'';
+  openOverlay('modal-rek');
+}
+function editRek(id){openRekModal(rekDB.find(r=>r.id===id));}
+
+async function saveRek() {
+  const kode=document.getElementById('rk-kode').value.trim();
+  const sub=document.getElementById('rk-sub').value.trim();
+  if(!kode){showNotif('Kode rekening wajib diisi!','err');return;}
+  if(!sub){showNotif('Sub kegiatan wajib diisi!','err');return;}
+  const editId=document.getElementById('rek-edit-id').value;
+  const entry={id:editId||'k'+Date.now(),kode,sub,
+    jenis:document.getElementById('rk-jenis').value};
+  if(editId){const i=rekDB.findIndex(r=>r.id===editId);if(i>-1)rekDB[i]=entry;showNotif('✅ Kode rekening diperbarui!');}
+  else{rekDB.push(entry);showNotif('✅ Kode rekening baru ditambahkan!','ok');}
+  await saveStorage(KEY_REK,rekDB);
+  renderRek(); closeModal('modal-rek');
+}
+
+// =====================================================
+// DELETE
+// =====================================================
+function promptDel(id, type) {
+  deleteId=id; deleteType=type;
+  const d=type==='ref'?refDB.find(r=>r.id===id):rekDB.find(r=>r.id===id);
+  document.getElementById('del-name').textContent=type==='ref'?d?.nama:d?.kode+' — '+d?.sub?.slice(0,40);
+  openOverlay('modal-del');
+}
+async function confirmDelete() {
+  if(!deleteId) return;
+  if(deleteType==='ref'){refDB=refDB.filter(r=>r.id!==deleteId);await saveStorage(KEY_REF,refDB);renderREF();}
+  else{rekDB=rekDB.filter(r=>r.id!==deleteId);await saveStorage(KEY_REK,rekDB);renderRek();}
+  closeModal('modal-del'); showNotif('🗑️ Data berhasil dihapus','info');
+  deleteId=null; deleteType=null;
+}
+
+// =====================================================
+// EXPORT CSV
+// =====================================================
+function exportCSV(type) {
+  let csv, filename;
+  if(type==='ref') {
+    const h=['NO','NAMA PENERIMA','NO REKENING','NAMA BANK','NPWP','NITKU'];
+    const rows=refDB.map((r,i)=>[i+1,r.nama,r.rek,r.bank,r.npwp,r.nitku].map(v=>`"${(v||'').replace(/"/g,'""')}"`).join(','));
+    csv=[h.join(','),...rows].join('\n'); filename='REF_Penyedia_SAKTI_BLUD_2026.csv';
+  } else {
+    const h=['NO','KODE REKENING','SUB KEGIATAN','JENIS KEGIATAN'];
+    const rows=rekDB.map((r,i)=>[i+1,r.kode,r.sub,r.jenis].map(v=>`"${(v||'').replace(/"/g,'""')}"`).join(','));
+    csv=[h.join(','),...rows].join('\n'); filename='REF_KodeRekening_SAKTI_BLUD_2026.csv';
+  }
+  const a=document.createElement('a');
+  a.href='data:text/csv;charset=utf-8,\uFEFF'+encodeURIComponent(csv);
+  a.download=filename; a.click();
+  showNotif('📥 Export CSV berhasil!','ok');
+}
+
+// =====================================================
+// INIT
+// =====================================================
+renderSPJ(spjData);
+loadAll();
+</script>
+</body>
+</html>
